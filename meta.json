@@ -1,0 +1,54 @@
+{
+	"mcss_ver": "1.0.0",
+	
+	"addons": {
+		"vanilla": [],
+		"paper": [],
+		"fabric": [],
+		"bedrock-paper": [
+			"https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar",
+			"https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar"
+		]
+	},
+	"versions": {
+		"vanilla": {
+			"1.9.4": "https://piston-data.mojang.com/v1/objects/edbb7b1758af33d365bf835eb9d13de005b1e274/server.jar",
+			"1.10.2": "https://piston-data.mojang.com/v1/objects/3d501b23df53c548254f5e3f66492d178a48db63/server.jar",
+			"1.11.2": "https://piston-data.mojang.com/v1/objects/f00c294a1576e03fddcac777c3cf4c7d404c4ba4/server.jar",
+			"1.12.2": "https://piston-data.mojang.com/v1/objects/886945bfb2b978778c3a0288fd7fab09d315b25f/server.jar",
+			"1.13.2": "https://piston-data.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7/server.jar",
+			"1.14.4": "https://piston-data.mojang.com/v1/objects/3dc3d84a581f14691199cf6831b71ed1296a9fdf/server.jar",
+			"1.15.2": "https://piston-data.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar",
+			"1.16.5": "https://piston-data.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar",
+			"1.17.1": "https://piston-data.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar",
+			"1.18.2": "https://piston-data.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar",
+			"1.19.2": "https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar"
+		},
+		"paper": {
+			"1.9.4": "https://api.papermc.io/v2/projects/paper/versions/1.9.4/builds/775/downloads/paper-1.9.4-775.jar",
+			"1.10.2": "https://api.papermc.io/v2/projects/paper/versions/1.10.2/builds/918/downloads/paper-1.10.2-918.jar",
+			"1.11.2": "https://api.papermc.io/v2/projects/paper/versions/1.11.2/builds/1106/downloads/paper-1.11.2-1106.jar",
+			"1.12.2": "https://api.papermc.io/v2/projects/paper/versions/1.12.2/builds/1620/downloads/paper-1.12.2-1620.jar",
+			"1.13.2": "https://api.papermc.io/v2/projects/paper/versions/1.13.2/builds/657/downloads/paper-1.13.2-657.jar",
+			"1.14.4": "https://api.papermc.io/v2/projects/paper/versions/1.14.4/builds/245/downloads/paper-1.14.4-245.jar",
+			"1.15.2": "https://api.papermc.io/v2/projects/paper/versions/1.15.2/builds/393/downloads/paper-1.15.2-393.jar",
+			"1.16.5": "https://api.papermc.io/v2/projects/paper/versions/1.16.5/builds/794/downloads/paper-1.16.5-794.jar",
+			"1.17.1": "https://api.papermc.io/v2/projects/paper/versions/1.17.1/builds/411/downloads/paper-1.17.1-411.jar",
+			"1.18.2": "https://api.papermc.io/v2/projects/paper/versions/1.18.2/builds/387/downloads/paper-1.18.2-387.jar",
+			"1.19.2": "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/132/downloads/paper-1.19.2-132.jar"
+		},
+		"fabric": {
+			"1.9.4": "https://meta.legacyfabric.net/v2/versions/loader/1.9.4/0.14.9/0.10.1/server/jar",
+			"1.10.2": "https://meta.legacyfabric.net/v2/versions/loader/1.10.2/0.14.9/0.10.1/server/jar",
+			"1.11.2": "https://meta.legacyfabric.net/v2/versions/loader/1.11.2/0.14.9/0.10.1/server/jar",
+			"1.12.2": "https://meta.legacyfabric.net/v2/versions/loader/1.12.2/0.14.9/0.10.1/server/jar",
+			"1.13.2": "https://meta.legacyfabric.net/v2/versions/loader/1.13.2/0.14.9/0.10.1/server/jar",
+			"1.14.4": "https://meta.fabricmc.net/v2/versions/loader/1.14.4/0.14.9/0.11.0/server/jar",
+			"1.15.2": "https://meta.fabricmc.net/v2/versions/loader/1.15.2/0.14.9/0.11.0/server/jar",
+			"1.16.5": "https://meta.fabricmc.net/v2/versions/loader/1.16.5/0.14.9/0.11.0/server/jar",
+			"1.17.1": "https://meta.fabricmc.net/v2/versions/loader/1.17.1/0.14.9/0.11.0/server/jar",
+			"1.18.2": "https://meta.fabricmc.net/v2/versions/loader/1.18.2/0.14.9/0.11.0/server/jar",
+			"1.19.2": "https://meta.fabricmc.net/v2/versions/loader/1.19.2/0.14.9/0.11.0/server/jar"
+		}
+	}
+}
