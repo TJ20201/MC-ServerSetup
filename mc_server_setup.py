@@ -24,20 +24,30 @@ if content == '':
 	print("The content of the versions.json can not be found.")
 	exitFunc()
 else:
-	jcont = json.loads(content)
-	print("------")
-	# TODO paper, fabric and forge versions
-	typ = input("Specify a loader type. (vanilla | paper | fabric | forge) >> ")
-	vers = [ver for ver in jcont[typ]]
-	print("------")
-	print(vers)
-	ver = input("Specify a version from the list above >> ")
-	print("------")
-	fold = "server_"+ver+"_"+typ
-	print("Creating "+fold+" folder...")
-	os.mkdir(fold)
-	print("Downloading server JAR file...")
-	open(fold+"\\server.jar", "wb").write(requests.get(jcont[typ][ver]).content)
-	print("------")
-	print("Done!")
-	exitFunc()
+	try:
+		jcont = json.loads(content)
+		print("------")
+		typ = input("Specify a loader type. (vanilla | paper | fabric) >> ")
+		vers = [ver for ver in jcont[typ]]
+		print("------")
+		print(vers)
+		ver = input("Specify a version from the list above >> ")
+		print("------")
+		fold = "server_"+ver+"_"+typ
+		print("Creating "+fold+" folder...")
+		os.mkdir(fold)
+		print("Downloading server JAR file...")
+		jar = open(fold+"\\server.jar", "wb")
+		jar.write(requests.get(jcont[typ][ver]).content)
+		print("Creating EULA file...")
+		eula = open(fold+"\\eula.txt", "wb")
+		eula.write(bytes("eula=true", "utf8"))
+		print("Creating RUN batch file...")
+		runbat = open(fold+"\\run.bat", "wb")
+		runbat.write(bytes("java -Xmx1G -Xms1G -jar server.jar nogui\npause", "utf8"))
+		print("------")
+		print("Done!")
+		exitFunc()
+	except Exception as e:
+		print(e)
+		exitFunc()

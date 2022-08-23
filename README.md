@@ -13,27 +13,27 @@ Below is a table of every version source from 1.9.4 to 1.19.2
 |----------|----------|----------|
 |   1.9.4  |  VANILLA | piston-data.mojang.com |
 |   1.9.4  |  PAPER   | api.papermc.io |
-|   1.9.4  |  FABRIC  | [tba] |
+|   1.9.4  |  FABRIC  | meta.legacyfabric.net |
 |   1.9.4  |  FORGE   | [tba] |
 |----------|----------|----------|
 |   1.10.2  |  VANILLA | piston-data.mojang.com |
 |   1.10.2  |  PAPER   | api.papermc.io |
-|   1.10.2  |  FABRIC  | [tba] |
+|   1.10.2  |  FABRIC  | meta.legacyfabric.net |
 |   1.10.2  |  FORGE   | [tba] |
 |----------|----------|----------|
 |   1.11.2  |  VANILLA | piston-data.mojang.com |
 |   1.11.2  |  PAPER   | api.papermc.io |
-|   1.11.2  |  FABRIC  | [tba] |
+|   1.11.2  |  FABRIC  | meta.legacyfabric.net |
 |   1.11.2  |  FORGE   | [tba] |
 |----------|----------|----------|
 |   1.12.2  |  VANILLA | piston-data.mojang.com |
 |   1.12.2  |  PAPER   | api.papermc.io |
-|   1.12.2  |  FABRIC  | [tba] |
+|   1.12.2  |  FABRIC  | meta.legacyfabric.net |
 |   1.12.2  |  FORGE   | [tba] |
 |----------|----------|----------|
 |   1.13.2  |  VANILLA | piston-data.mojang.com |
 |   1.13.2  |  PAPER   | api.papermc.io |
-|   1.13.2  |  FABRIC  | [tba] |
+|   1.13.2  |  FABRIC  | meta.legacyfabric.net |
 |   1.13.2  |  FORGE   | [tba] |
 |----------|----------|----------|
 |   1.14.4  |  VANILLA | piston-data.mojang.com |

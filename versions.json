@@ -26,11 +26,11 @@
 		"1.19.2": "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/132/downloads/paper-1.19.2-132.jar"
 	},
 	"fabric": {
-		"1.9.4": "",
-		"1.10.2": "",
-		"1.11.2": "",
-		"1.12.2": "",
-		"1.13.2": "",
+		"1.9.4": "https://meta.legacyfabric.net/v2/versions/loader/1.9.4/0.14.9/0.10.1/server/jar",
+		"1.10.2": "https://meta.legacyfabric.net/v2/versions/loader/1.10.2/0.14.9/0.10.1/server/jar",
+		"1.11.2": "https://meta.legacyfabric.net/v2/versions/loader/1.11.2/0.14.9/0.10.1/server/jar",
+		"1.12.2": "https://meta.legacyfabric.net/v2/versions/loader/1.12.2/0.14.9/0.10.1/server/jar",
+		"1.13.2": "https://meta.legacyfabric.net/v2/versions/loader/1.13.2/0.14.9/0.10.1/server/jar",
 		"1.14.4": "https://meta.fabricmc.net/v2/versions/loader/1.14.4/0.14.9/0.11.0/server/jar",
 		"1.15.2": "https://meta.fabricmc.net/v2/versions/loader/1.15.2/0.14.9/0.11.0/server/jar",
 		"1.16.5": "https://meta.fabricmc.net/v2/versions/loader/1.16.5/0.14.9/0.11.0/server/jar",
