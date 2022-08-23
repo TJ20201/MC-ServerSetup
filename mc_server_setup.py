@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-modules = ["base64", "requests"]
+modules = ["base64", "requests", "json", "os"]
 
 def exitFunc():
 	input("> Press enter to exit <")
@@ -19,10 +19,25 @@ req = requests.get(url)
 content = ''
 if req.status_code == requests.codes.ok:
     req = req.json()
-    content = base64.decodestring(req['content'])
-
+    content = base64.b64decode(req['content'])
 if content == '':
 	print("The content of the versions.json can not be found.")
 	exitFunc()
 else:
-	print(content)
+	jcont = json.loads(content)
+	print("------")
+	# TODO paper, fabric and forge versions
+	typ = input("Specify a loader type. (vanilla | paper | fabric | forge) >> ")
+	vers = [ver for ver in jcont[typ]]
+	print("------")
+	print(vers)
+	ver = input("Specify a version from the list above >> ")
+	print("------")
+	fold = "server_"+ver+"_"+typ
+	print("Creating "+fold+" folder...")
+	os.mkdir(fold)
+	print("Downloading server JAR file...")
+	open(fold+"\\server.jar", "wb").write(requests.get(jcont[typ][ver]).content)
+	print("------")
+	print("Done!")
+	exitFunc()
