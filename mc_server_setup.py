@@ -44,7 +44,7 @@ else:
 		eula.write(bytes("eula=true", "utf8"))
 		print("Creating RUN batch file...")
 		runbat = open(fold+"\\run.bat", "wb")
-		runbat.write(bytes("java -Xmx1G -Xms1G -jar server.jar nogui\npause", "utf8"))
+		runbat.write(bytes("@echo off\njava -Xmx1G -Xms1G -jar server.jar nogui\npause", "utf8"))
 		print("------")
 		print("Done!")
 		exitFunc()
