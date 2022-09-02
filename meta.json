@@ -1,13 +1,13 @@
 {
-	"mcss_ver": "1.0.0",
-	
+	"mcss_ver": "1.1.0",
+
 	"addons": {
 		"vanilla": [],
 		"paper": [],
 		"fabric": [],
 		"bedrock-paper": [
-			"https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar",
-			"https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar"
+			{"url": "https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar", "name":"geyser"},
+			{"url": "https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar", "name": "floodgate"}
 		]
 	},
 	"versions": {
