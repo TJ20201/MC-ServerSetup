@@ -69,10 +69,10 @@ else:
 		if typ != "vanilla":
 			if typ == "plugin":
 				print("Creating PLUGINS folder...")
-				os.mkdir("plugins")
+				os.mkdir(fold+"\\plugins")
 			if typ == "modded":
 				print("Creating MODS folder...")
-				os.mkdir("mods")
+				os.mkdir(fold+"\\mods")
 		# Autofill special folder
 		if typ == "plugin" and variant == 1:
 			for mod in jcont["addons"]["bedrock-paper"].content:
