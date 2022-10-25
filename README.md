@@ -11,7 +11,7 @@ You can find the latest working `mc_server_setup.py` in the releases section. Pu
 3. After importing all modules, you will be prompted to provide a loader type. Each loader will be described here, type in the one you want and proceed to step 4:
    - VANILLA - The basic Minecraft experience with no mods or plugins.
    - PAPER   - Minecraft with the ability for plugins such as Essentials.
-   - FABRIC  - Minecraft with mods from the (https://fabricmc.net)[Fabric loader] for 1.14.4 and above or the (https://legacyfabric.net)[Legacy Fabric] loader for 1.13.2 and below.
+   - FABRIC  - Minecraft with mods from the [Fabric Loader](https://fabricmc.net) for 1.14.4 and above or the [Legacy Fabric](https://legacyfabric.net) loader for 1.13.2 and below.
 4. After providing a loader type, you can choose a Minecraft version from 1.9.4 to 1.19.2. Each version is the last one before the next version (eg. 1.10.2 was the final version before 1.11 was made). Choose a version from the list given to you by the version chooser prompt (the list will be surrounded in square brackets which look like []). 1.8 is not supported by this setup tool due to being an EXE server file and not a JAR server file.
 5. Finally, your server will be created in a folder named after your options, it will begin with `server_` and have your version in the middle (eg. `1.19.2`) and end with your loader type (eg. `fabric`). Once it finishes creating and you see `Done!` printed at the bottom of the console, you can close down the `mc_server_setup.py` file and begin configuring your server! (See the CONFIGURING section below for tips on configuring your server.)
 
@@ -82,3 +82,9 @@ Below is a table of every version source from 1.9.4 to 1.19.2
 |   1.19.2  |  PAPER   | api.papermc.io |
 |   1.19.2  |  FABRIC  | meta.fabricmc.net |
 |   1.19.2  |  FORGE   | [tba] |
+|----------|----------|----------|
+|  | `WARNING: VERSION 1.20.0 IS NOT YET RELEASED, DATA IS OF LATEST SNAPSHOT` |
+|   1.20.0  |  VANILLA | piston-data.mojang.com |
+|   1.20.0  |  PAPER   | [tba] |
+|   1.20.0  |  FABRIC  | [tba] |
+|   1.20.0  |  FORGE   | [tba] |
