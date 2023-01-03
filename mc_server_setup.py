@@ -80,7 +80,9 @@ else:
 		if mtyp == "paper" and variant == 1:
 			for mod in jcont["addons"]["bedrock-paper"]:
 				fil = open(fold+f"\\plugins\\{mod['name']}.jar", "wb")
-				fil.write(requests.get(mod['url']).text.encode('utf-8'))
+				modContent = requests.get(mod['url'])
+				modData = modContent.content
+				fil.write(modData)
 				fil.close()
 		# Run helper file
 		print("Creating RUN batch file...")
