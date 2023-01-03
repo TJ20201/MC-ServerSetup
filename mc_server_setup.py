@@ -38,23 +38,26 @@ else:
 		# Extra additions to specific versions (eg. bedrock-paper autoinstalls Geyser)
 		variant = 0
 		# Variant handler
-		if typ == "bedrock-paper": variant = 1
-		# Type handler
-		if typ == "paper": typ == "plugin"
-		if typ == "fabric": typ = "modded"
+		if typ == "bedrock-paper": 
+			variant = 1
+			typ = "paper"
 		# Version List
 		vers = [ver for ver in jcont["versions"][typ]]
 		print("------")
 		print(vers)
 		ver = input("Specify a version from the list above >> ")
 		print("------")
+		# Varied file name creator
 		ex = ""
-		if typ == "plugin":
+		if typ == "paper":
+			mtyp = typ
 			if variant == 0: ex = "paper"
 			if variant == 1: ex = "bedrockpaper"
-		if typ == "modded":
+		if typ == "fabric":
+			mtyp = typ
 			if variant == 0: ex = "fabric"
-		fold = "server_"+ex+ver+"_"+typ
+		# General server files
+		fold = "server_"+ver+"_"+ex
 		print("Creating "+fold+" folder...")
 		os.mkdir(fold)
 		print("Downloading server JAR file...")
@@ -67,17 +70,17 @@ else:
 		eula.close()
 		# Special folder
 		if typ != "vanilla":
-			if typ == "plugin":
+			if mtyp == "paper":
 				print("Creating PLUGINS folder...")
 				os.mkdir(fold+"\\plugins")
-			if typ == "modded":
+			if mtyp == "modded":
 				print("Creating MODS folder...")
 				os.mkdir(fold+"\\mods")
 		# Autofill special folder
-		if typ == "plugin" and variant == 1:
-			for mod in jcont["addons"]["bedrock-paper"].content:
-				fil = open(fold+f"\\plugins\\{mod.name}")
-				fil.write(requests.get(mod.url))
+		if mtyp == "paper" and variant == 1:
+			for mod in jcont["addons"]["bedrock-paper"]:
+				fil = open(fold+f"\\plugins\\{mod['name']}.jar", "wb")
+				fil.write(requests.get(mod['url']).text.encode('utf-8'))
 				fil.close()
 		# Run helper file
 		print("Creating RUN batch file...")
