@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 modules = ["base64", "requests", "json", "os"]
-version = "1.1.0"
+version = "1.2.0"
 
 def exitFunc():
 	input("> Press enter to exit <")
@@ -49,33 +49,34 @@ else:
 		print("------")
 		# Server.Properties customisation
 		doSPCustom = input("Specify if you would like to pre-edit your Server Properties (Y/N) >> ")
-		ServerProperties = {}
+		ServerProperties = []
 		if doSPCustom.lower() == "y":
 			props = [prop for prop in jcont["servsettings"]]
 			for prop in props:
-				tag = ", ".join([tg for tg in prop["tags"]])
-				desc = prop["desc"]
-				print(f"- {prop} - {tag}{desc}")
+				desc = jcont["servsettings"][prop]["desc"]
 				opta = []
-				for op in prop["options"]:
+				for op in jcont["servsettings"][prop]["options"]:
 					if op.startswith("*range-"): 
 						ap = op.split("-")[1]
 						opta.append(f"range from 1 to {ap}")
 					elif op.startswith("*string"): opta.append(f"any string")
 					else: opta.append(op)
-				opt = ", ".join(opt)
-				defval = prop["default"]
-				ServerProperties[prop] = input(f"Enter a value for {prop} (values: {opt}) (default: {defval})>>")
+				opt = ", ".join(opta)
+				defval = jcont["servsettings"][prop]["default"]
+				print(f"{prop} (values: {opt}) - {desc}")
+				x = input(f"- Enter a value for {prop} (default: {defval}) >>")
+				if x == "": x = defval
+				ServerProperties.append(f"{prop}={x}")
 		print("------")
 		# Varied file name creator
 		ex = ""
+		mtyp = typ
 		if typ == "paper":
-			mtyp = typ
 			if variant == 0: ex = "paper"
 			if variant == 1: ex = "bedrockpaper"
-		if typ == "fabric":
-			mtyp = typ
+		elif typ == "fabric":
 			if variant == 0: ex = "fabric"
+		else: ex = "vanilla"
 		# General server files
 		fold = "server_"+ver+"_"+ex
 		print("Creating "+fold+" folder...")
@@ -88,6 +89,11 @@ else:
 		eula = open(fold+"\\eula.txt", "w")
 		eula.write("eula=true")
 		eula.close()
+		if doSPCustom:
+			print("Creating server PROPERTIES file...")
+			spcu = open(fold+"\\server.properties", "w")
+			spcu.write("\n".join(ServerProperties))
+			spcu.close()
 		# Special folder
 		if typ != "vanilla":
 			if mtyp == "paper":
