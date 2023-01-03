@@ -47,6 +47,26 @@ else:
 		print(vers)
 		ver = input("Specify a version from the list above >> ")
 		print("------")
+		# Server.Properties customisation
+		doSPCustom = input("Specify if you would like to pre-edit your Server Properties (Y/N) >> ")
+		ServerProperties = {}
+		if doSPCustom.lower() == "y":
+			props = [prop for prop in jcont["servsettings"]]
+			for prop in props:
+				tag = ", ".join([tg for tg in prop["tags"]])
+				desc = prop["desc"]
+				print(f"- {prop} - {tag}{desc}")
+				opta = []
+				for op in prop["options"]:
+					if op.startswith("*range-"): 
+						ap = op.split("-")[1]
+						opta.append(f"range from 1 to {ap}")
+					elif op.startswith("*string"): opta.append(f"any string")
+					else: opta.append(op)
+				opt = ", ".join(opt)
+				defval = prop["default"]
+				ServerProperties[prop] = input(f"Enter a value for {prop} (values: {opt}) (default: {defval})>>")
+		print("------")
 		# Varied file name creator
 		ex = ""
 		if typ == "paper":
